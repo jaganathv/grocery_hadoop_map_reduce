@@ -7,17 +7,17 @@ The dataset collected users` transaction data of 4 months. The total count of tr
 
 Given below are the programs
 
-1)	Customer Id for the customer who has spent maximum amount in each month 
+1)	Customer Id for the customer who has spent maximum amount in each month
           CustWithMaxSpending.java
           
 2) Customer Id for customers who has spent maximum amounts in year 2000 & 2001
-          CustWithMaxSpendingByYear.java
+   CustWithMaxSpendingByYear.java
           
 3) Most Sold Product by Age Group:
-          PrdSales2ByAgeGroup.java       
+   PrdSales2ByAgeGroup.java       
           
-4)	Maximum Revenue by Product_ID
-          MaxRevenueByProdID.java
+4) Maximum Revenue by Product_ID
+   MaxRevenueByProdID.java
 
 
 
