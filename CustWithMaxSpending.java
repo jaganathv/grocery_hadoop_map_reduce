@@ -1,9 +1,6 @@
 package lesson1;
-
 import java.io.IOException;
-
 import java.util.TreeMap;
-
 import org.apache.hadoop.conf.Configuration;
 import lesson1.GroupingComparator;
 import lesson1.MaxSpendPartitioner;
@@ -55,7 +52,7 @@ public class CustWithMaxSpending {
     
   class MaxSpendMapper extends Mapper<LongWritable, Text, TextPair, LongWritable>
   {
-	  @Override  
+  	@Override  
     public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException 
     {
       String[] line = value.toString().split(";");        
@@ -95,17 +92,4 @@ public class CustWithMaxSpending {
        	 context.write(new LongWritable(MaxAmount),new Text(custIdDt));
        	
     } 
-   } 
-    	 
-    	 
-    		 
-    	 
-    	 
-    	 
-    	 
-    	 
-    		 
-    	 
-    
-    
-    	
+   }   	
