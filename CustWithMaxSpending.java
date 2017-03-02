@@ -16,6 +16,7 @@ import org.apache.hadoop.mapreduce.lib.input.MultipleInputs;
 import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
+//This program computes the customer details who had the maximum spending at Ta-Feng Grocery Retail Store between the Periods of Nov-2000 to Feb-2001 i.e., for a period of 4 Months. 
 public class CustWithMaxSpending {
 	public static void main(String[] args) throws Exception {
 		Configuration conf = new Configuration();
@@ -23,8 +24,8 @@ public class CustWithMaxSpending {
 	    
 	    job.setJarByClass(CustWithMaxSpending.class); 
 	    job.setInputFormatClass(TextInputFormat.class);
-	   // job.setMapperClass(MaxSpendMapper.class);
-	    
+	   
+	    //Using MultipleInputs class to accomodate inputs from Multiple Files at the same time
 	    MultipleInputs.addInputPath(job,new Path(args[0]), TextInputFormat.class,MaxSpendMapper.class);
 	    MultipleInputs.addInputPath(job,new Path(args[1]), TextInputFormat.class,MaxSpendMapper.class);
 	    MultipleInputs.addInputPath(job,new Path(args[2]), TextInputFormat.class,MaxSpendMapper.class);
